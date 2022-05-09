@@ -1,10 +1,9 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//이 자식 문제있음 해결하자ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ(깃허브 겸)
-//second branch에서 수정
+
 public class UI_Manager : MonoBehaviour
 {
     [SerializeField]
@@ -12,7 +11,7 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     Text _time;
 
-
+/*
     public void SetHealth(float _arg)
     {
         _healthBar.value = _arg;
@@ -38,7 +37,7 @@ public class UI_Manager : MonoBehaviour
         _arg = (float)Math.Round(_arg);
         _time.text = _arg.ToString();
     }
-
+*/
 // Start is called before the first frame update
 void Start()
     {
