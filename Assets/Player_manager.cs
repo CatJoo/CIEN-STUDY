@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//secondbranch hibranchì—ì„œ ìˆ˜ì •
 public class Player_manager : MonoBehaviour
 {
-    //Ã¼·Â, ½ºÅ×¹Ì³ª, ½Ã°£
+    //Ã¼ï¿½ï¿½, ï¿½ï¿½ï¿½×¹Ì³ï¿½, ï¿½Ã°ï¿½
 
     bool _isAlive = true;
 
-    [SerializeField] UI_Manager _uimanager;  //UI manager ÇÏÃ»À¸·Î ³Ö¾îÁÖ±â(ÀÌ¸§ ½ºÅ©¸³Æ® ÀÌ¸§ÀÌ¶û °°°Ô ÁÖÀÇ!!!!)
+    [SerializeField] UI_Manager _uimanager;  //UI manager ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½Ö±ï¿½(ï¿½Ì¸ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½Ì¸ï¿½ï¿½Ì¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!!!)
 
     [SerializeField] float _health = 100f;
     [SerializeField] float _stemina = 100f;
@@ -21,7 +21,7 @@ public class Player_manager : MonoBehaviour
     void Start()
     {
         _uimanager.SetMaxHealth(_health);
-        _uimanager.SetHealth(_health);     //°ª ÃÊ±âÈ­ÇÏ°í ½ÃÀÛ
+        _uimanager.SetHealth(_health);     //ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½
         _uimanager.SetMaxStemina(_maxStemina);
         _uimanager.SetStemina(_stemina);     
         _uimanager.SetTime(_time); 
@@ -29,31 +29,31 @@ public class Player_manager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() //¸Å ¼ø°£¸¶´Ù Ã¼Å©
+    void Update() //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
     {
-        if(Input.GetAxis("Horizontal") != 0)    //xÃà °ªÀ» ¹Ş¾Æ¼­ 0ÀÌ ¾Æ´Ï¸é, Áï ¿òÁ÷ÀÌ¸é stemina °¨¼Ò
+        if(Input.GetAxis("Horizontal") != 0)    //xï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ş¾Æ¼ï¿½ 0ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ stemina ï¿½ï¿½ï¿½ï¿½
         {
             _stemina -= Time.deltaTime*5;
 
         }
 
-        else if (_stemina < _maxStemina)   //stemina°¡ ¹«ÇÑÁ¤ Áõ°¡ÇÒ ¼ö´Â ¾øÀ¸´Ï ÃÖ´ë°ª ¼³Á¤
+        else if (_stemina < _maxStemina)   //steminaï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ë°ª ï¿½ï¿½ï¿½ï¿½
         {
             _stemina += Time.deltaTime*5;
         }
 
-        _uimanager.SetStemina(_stemina);   //stemina °ªÀÌ º¯ÇÒ ¶§ ui¿¡µµ Àû¿ëÀÌ µÇµµ·Ï
+        _uimanager.SetStemina(_stemina);   //stemina ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ uiï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ï¿½
         
         _time += Time.deltaTime;
         _uimanager.SetTime(_time);   
 
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)  //ºÎµúÈù ¾Ö¸¦ returnÇÏ´Â ÇÔ¼ö
+    private void OnControllerColliderHit(ControllerColliderHit hit)  //ï¿½Îµï¿½ï¿½ï¿½ ï¿½Ö¸ï¿½ returnï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     {
         Debug.Log("hit" + hit.gameObject.name);
 
-        if (hit.gameObject.name == "fire")  //ºÎµúÈù ¾ÖÀÇ ÀÌ¸§ÀÌ fireÀÌ¸é heath -1 
+        if (hit.gameObject.name == "fire")  //ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ fireï¿½Ì¸ï¿½ heath -1 
         {
             if (_health > 0)
             {
@@ -62,11 +62,11 @@ public class Player_manager : MonoBehaviour
             else
             {
                 _isAlive = false;
-                Debug.Log("Game Over");   //Console Collapse Ã¢¿¡ Game Over ¶ä
-                Destroy(gameObject);  //¿ÀºêÁ§Æ®¸¦ ÆÄ±«, ¿©±â¼­ gameObject´Â player
+                Debug.Log("Game Over");   //Console Collapse Ã¢ï¿½ï¿½ Game Over ï¿½ï¿½
+                Destroy(gameObject);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½, ï¿½ï¿½ï¿½â¼­ gameObjectï¿½ï¿½ player
 
             }
-            _uimanager.SetHelath(_health);   //health °ªÀÌ º¯ÇÒ ¶§ ui¿¡µµ Àû¿ëÀÌ µÇµµ·Ï
+            _uimanager.SetHelath(_health);   //health ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ uiï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ï¿½
 
         }
 
